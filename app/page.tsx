@@ -6,12 +6,13 @@ function Page() {
   const [inputText, setInputText] = useState('')
   const [isDarkMode, setIsDarkMode] = useState(true)
   const [copied, setCopied] = useState(false)
+  const [separator, setSeparator] = useState<'-' | '_'>('-')
   
   const transformedText = inputText
     .toLowerCase()
     .normalize('NFD')
     .replace(/[\u0300-\u036f]/g, '')
-    .replace(/[\s/']+/g, '-')
+    .replace(/[\s/']+/g, separator)
   
   return (
     <div className={`min-h-screen flex items-center justify-center p-4 transition-colors duration-300 ${
@@ -66,6 +67,42 @@ function Page() {
                   : 'bg-white border-slate-200 text-slate-900 placeholder-slate-400 focus:border-blue-500 focus:ring-blue-200'
               }`}
             />
+          </div>
+
+          <div className="space-y-2">
+            <label className={`block text-sm font-semibold ${isDarkMode ? 'text-slate-300' : 'text-slate-700'}`}>
+              Separator character
+            </label>
+            <div className="flex gap-3">
+              <button
+                onClick={() => setSeparator('-')}
+                className={`flex-1 py-2.5 px-4 rounded-lg font-medium transition-all ${
+                  separator === '-'
+                    ? isDarkMode
+                      ? 'bg-blue-600 text-white ring-2 ring-blue-400'
+                      : 'bg-blue-600 text-white ring-2 ring-blue-400'
+                    : isDarkMode
+                    ? 'bg-slate-700 text-slate-300 hover:bg-slate-600'
+                    : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                }`}
+              >
+                Dash (-)
+              </button>
+              <button
+                onClick={() => setSeparator('_')}
+                className={`flex-1 py-2.5 px-4 rounded-lg font-medium transition-all ${
+                  separator === '_'
+                    ? isDarkMode
+                      ? 'bg-blue-600 text-white ring-2 ring-blue-400'
+                      : 'bg-blue-600 text-white ring-2 ring-blue-400'
+                    : isDarkMode
+                    ? 'bg-slate-700 text-slate-300 hover:bg-slate-600'
+                    : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                }`}
+              >
+                Underscore (_)
+              </button>
+            </div>
           </div>
           
           {inputText && (
