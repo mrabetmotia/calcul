@@ -14,6 +14,9 @@ function Page() {
     .replace(/[\u0300-\u036f]/g, '')
     .replace(/[\s/']+/g, separator)
   
+  const inputCharCount = inputText.length
+  const transformedCharCount = transformedText.length
+  
   return (
     <div className={`min-h-screen flex items-center justify-center p-4 transition-colors duration-300 ${
       isDarkMode ? 'bg-slate-900' : 'bg-linear-to-br from-slate-50 to-slate-100'
@@ -53,9 +56,16 @@ function Page() {
           </div>
           
           <div className="space-y-2">
-            <label className={`block text-sm font-semibold ${isDarkMode ? 'text-slate-300' : 'text-slate-700'}`}>
-              Enter your text
-            </label>
+            <div className="flex items-center justify-between">
+              <label className={`block text-sm font-semibold ${isDarkMode ? 'text-slate-300' : 'text-slate-700'}`}>
+                Enter your text
+              </label>
+              {inputText && (
+                <span className={`text-xs font-medium ${isDarkMode ? 'text-slate-400' : 'text-slate-500'}`}>
+                  {inputCharCount} character{inputCharCount !== 1 ? 's' : ''}
+                </span>
+              )}
+            </div>
             <input
               type="text"
               value={inputText}
@@ -107,9 +117,14 @@ function Page() {
           
           {inputText && (
             <div className="space-y-2 animate-in fade-in slide-in-from-bottom-3 duration-300">
-              <label className={`block text-sm font-semibold ${isDarkMode ? 'text-slate-300' : 'text-slate-700'}`}>
-                Transformed output
-              </label>
+              <div className="flex items-center justify-between">
+                <label className={`block text-sm font-semibold ${isDarkMode ? 'text-slate-300' : 'text-slate-700'}`}>
+                  Transformed output
+                </label>
+                <span className={`text-xs font-medium ${isDarkMode ? 'text-slate-400' : 'text-slate-500'}`}>
+                  {transformedCharCount} character{transformedCharCount !== 1 ? 's' : ''}
+                </span>
+              </div>
               <div className={`border-2 rounded-lg p-4 ${
                 isDarkMode 
                   ? 'bg-slate-700 border-slate-600' 
