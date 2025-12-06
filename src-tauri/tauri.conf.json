@@ -1,47 +1,47 @@
 {
-  "$schema": "../node_modules/@tauri-apps/cli/config.schema.json",
-  "productName": "calcul",
-  "version": "0.1.0",
-  "identifier": "com.calcul.app",
-  "build": {
-    "frontendDist": "../out",
-    "devUrl": "http://localhost:3000",
-    "beforeDevCommand": "bun dev",
-    "beforeBuildCommand": "bun run build"
-  },
-  "app": {
-    "windows": [
-      {
-        "title": "calcul",
-        "width": 800,
-        "height": 600,
-        "resizable": true,
-        "fullscreen": false
-      }
-    ],
-    "security": {
-      "csp": null
-    }
-  },
-  "bundle": {
-    "active": true,
-    "targets": "all",
-    "icon": [
-      "icons/32x32.png",
-      "icons/128x128.png",
-      "icons/128x128@2x.png",
-      "icons/icon.icns",
-      "icons/icon.ico"
-    ]
-  },
-  "plugins": {
-    "updater": {
-      "active": true,
-      "endpoints": [
-        "https://github.com/mrabetmotia/calcul/releases/latest/download/latest.json"
-      ],
-      "dialog": true,
-      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDE4Mzc2MUY0MUFGN0NBQzkKUldUSnl2Y2E5R0UzR0lVUDFlSTgyUGFEREFwN2JlUnVqQkM2dlh2YngyQkM4MlBjYzYyNkI4SWcK"
-    }
-  }
+    "$schema":  "../node_modules/@tauri-apps/cli/config.schema.json",
+    "productName":  "calcul",
+    "version":  "0.2.0",
+    "identifier":  "com.calcul.app",
+    "build":  {
+                  "frontendDist":  "../out",
+                  "devUrl":  "http://localhost:3000",
+                  "beforeDevCommand":  "bun dev",
+                  "beforeBuildCommand":  "bun run build"
+              },
+    "app":  {
+                "windows":  [
+                                {
+                                    "title":  "calcul",
+                                    "width":  800,
+                                    "height":  600,
+                                    "resizable":  true,
+                                    "fullscreen":  false
+                                }
+                            ],
+                "security":  {
+                                 "csp":  null
+                             }
+            },
+    "bundle":  {
+                   "active":  true,
+                   "targets":  "all",
+                   "icon":  [
+                                "icons/32x32.png",
+                                "icons/128x128.png",
+                                "icons/128x128@2x.png",
+                                "icons/icon.icns",
+                                "icons/icon.ico"
+                            ]
+               },
+    "plugins":  {
+                    "updater":  {
+                                    "active":  true,
+                                    "endpoints":  [
+                                                      "https://github.com/mrabetmotia/calcul/releases/latest/download/latest.json"
+                                                  ],
+                                    "dialog":  true,
+                                    "pubkey":  "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDE4Mzc2MUY0MUFGN0NBQzkKUldUSnl2Y2E5R0UzR0lVUDFlSTgyUGFEREFwN2JlUnVqQkM2dlh2YngyQkM4MlBjYzYyNkI4SWcK"
+                                }
+                }
 }
