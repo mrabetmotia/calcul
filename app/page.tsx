@@ -28,10 +28,10 @@ function Page() {
           <div className="flex items-center justify-between">
             <div className="text-center space-y-2 flex-1">
               <h1 className={`text-3xl font-bold ${isDarkMode ? 'text-white' : 'text-slate-800'}`}>
-                Text Transformer
+                Text Transformer Pro
               </h1>
               <p className={`text-sm ${isDarkMode ? 'text-slate-400' : 'text-slate-500'}`}>
-                Convert your text to URL-friendly format
+                Convert your text to URL-friendly format instantly
               </p>
             </div>
             <button
