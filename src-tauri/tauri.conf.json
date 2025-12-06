@@ -1,7 +1,7 @@
 {
     "$schema":  "../node_modules/@tauri-apps/cli/config.schema.json",
     "productName":  "calcul",
-    "version":  "0.3.0",
+    "version":  "0.4.0",
     "identifier":  "com.calcul.app",
     "build":  {
                   "frontendDist":  "../out",
@@ -40,8 +40,7 @@
                                     "endpoints":  [
                                                       "https://github.com/mrabetmotia/calcul/releases/latest/download/latest.json"
                                                   ],
-                                    "dialog":  true,
-                                    "pubkey":  "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDE4Mzc2MUY0MUFGN0NBQzkKUldUSnl2Y2E5R0UzR0lVUDFlSTgyUGFEREFwN2JlUnVqQkM2dlh2YngyQkM4MlBjYzYyNkI4SWcK"
+                                    "dialog":  true
                                 }
                 }
 }
