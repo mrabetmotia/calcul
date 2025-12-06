@@ -47,7 +47,7 @@ export default function DownloadPage() {
         <div className="grid md:grid-cols-2 gap-6 mb-12">
           {/* Windows MSI */}
           <a
-            href="https://github.com/mrabetmotia/calcul/releases/latest/download/calcul_0.2.0_x64_en-US.msi"
+            href="https://github.com/mrabetmotia/calcul/releases/download/v0.4.0/calcul_0.4.0_x64_en-US.msi"
             className="group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-slate-200 hover:border-blue-300 overflow-hidden"
           >
             <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-500/10 to-transparent rounded-bl-full"></div>
@@ -82,7 +82,7 @@ export default function DownloadPage() {
 
           {/* Windows NSIS */}
           <a
-            href="https://github.com/mrabetmotia/calcul/releases/latest/download/calcul_0.2.0_x64-setup.exe"
+            href="https://github.com/mrabetmotia/calcul/releases/download/v0.4.0/calcul_0.4.0_x64-setup.exe"
             className="group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-slate-200 hover:border-green-300 overflow-hidden"
           >
             <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-green-500/10 to-transparent rounded-bl-full"></div>
