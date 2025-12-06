@@ -121,9 +121,6 @@ function Page() {
                 <label className={`block text-sm font-semibold ${isDarkMode ? 'text-slate-300' : 'text-slate-700'}`}>
                   Transformed output
                 </label>
-                <span className={`text-xs font-medium ${isDarkMode ? 'text-slate-400' : 'text-slate-500'}`}>
-                  {transformedCharCount} character{transformedCharCount !== 1 ? 's' : ''}
-                </span>
               </div>
               <div className={`border-2 rounded-lg p-4 ${
                 isDarkMode 
