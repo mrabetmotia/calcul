@@ -14,7 +14,9 @@ $tauriConfig.version = $Version
 $tauriConfig | ConvertTo-Json -Depth 10 | Set-Content "src-tauri\tauri.conf.json"
 
 # Update version in Cargo.toml
-(Get-Content "src-tauri\Cargo.toml") -replace 'version = "\d+\.\d+\.\d+"', "version = `"$Version`"" | Set-Content "src-tauri\Cargo.toml"
+$cargoContent = Get-Content "src-tauri\Cargo.toml" -Raw
+$cargoContent = $cargoContent -replace '(?<=\[package\][^\[]*version\s*=\s*")[\d\.]+', $Version
+$cargoContent | Set-Content "src-tauri\Cargo.toml"
 
 # Update version in package.json
 $packageJson = Get-Content "package.json" -Raw | ConvertFrom-Json
