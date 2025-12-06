@@ -58,7 +58,7 @@ function Page() {
           <div className="space-y-2">
             <div className="flex items-center justify-between">
               <label className={`block text-sm font-semibold ${isDarkMode ? 'text-slate-300' : 'text-slate-700'}`}>
-                Enter your original text
+                Enter your text
               </label>
               {inputText && (
                 <span className={`text-xs font-medium ${isDarkMode ? 'text-slate-400' : 'text-slate-500'}`}>
