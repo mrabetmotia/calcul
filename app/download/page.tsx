@@ -32,7 +32,7 @@ export default function DownloadPage() {
             <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
               <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
             </svg>
-            <span>Version 0.3.0</span>
+            <span>Version 0.4.0</span>
           </div>
           <h1 className="text-5xl md:text-6xl font-bold text-slate-900 mb-6">
             Télécharger
@@ -47,7 +47,7 @@ export default function DownloadPage() {
         <div className="grid md:grid-cols-2 gap-6 mb-12">
           {/* Windows MSI */}
           <a
-            href="https://github.com/mrabetmotia/calcul/releases/download/v0.3.0/calcul_0.3.0_x64_en-US.msi"
+            href="https://github.com/mrabetmotia/calcul/releases/download/v0.4.0/calcul_0.4.0_x64_en-US.msi"
             className="group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-slate-200 hover:border-blue-300 overflow-hidden"
           >
             <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-500/10 to-transparent rounded-bl-full"></div>
@@ -82,7 +82,7 @@ export default function DownloadPage() {
 
           {/* Windows NSIS */}
           <a
-            href="https://github.com/mrabetmotia/calcul/releases/download/v0.3.0/calcul_0.3.0_x64-setup.exe"
+            href="https://github.com/mrabetmotia/calcul/releases/download/v0.4.0/calcul_0.4.0_x64-setup.exe"
             className="group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-slate-200 hover:border-green-300 overflow-hidden"
           >
             <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-green-500/10 to-transparent rounded-bl-full"></div>
