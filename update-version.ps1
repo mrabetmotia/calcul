@@ -1,5 +1,5 @@
 # Update Version Script for Calcul Desktop App
-# Usage: .\update-version.ps1 -Version "0.4.0"
+# Usage: .\update-version.ps1 -Version "0.5.0"
 
 param(
     [Parameter(Mandatory=$true)]
