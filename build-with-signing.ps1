@@ -1,5 +1,5 @@
 # Build script with signing for auto-updates
-# This will prompt for your password
+# Run interactively to enter password
 
 Write-Host "Building Calcul with auto-update support..." -ForegroundColor Cyan
 Write-Host ""
@@ -12,6 +12,9 @@ $password = Read-Host "Enter your signing key password"
 $env:TAURI_SIGNING_PRIVATE_KEY_PASSWORD = $password
 
 Write-Host ""
+Write-Host "Cleaning previous build..." -ForegroundColor Yellow
+Remove-Item -Recurse -Force "src-tauri\target" -ErrorAction SilentlyContinue
+
 Write-Host "Starting build..." -ForegroundColor Green
 
 # Build
